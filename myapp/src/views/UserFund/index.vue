@@ -1,7 +1,7 @@
 <template>
   <my-layout>
-   <fund-table></fund-table>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+    <fund-table></fund-table>
+    <el-backtop></el-backtop>
   </my-layout>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   components: {
     "my-layout": Layout,
     "fund-table": MyFundTable,
-  },      
+  },
 };
 </script>
 

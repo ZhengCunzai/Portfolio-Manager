@@ -5,6 +5,7 @@ import UserFund from "../views/UserFund";
 import Profit from "../views/Profit";
 import Dashboard from "../views/Dashboard";
 import About from "../views/About";
+import Query from "../views/Query"
 
 const routes = [
     {
@@ -38,7 +39,10 @@ const routes = [
         path: "/about",
         component: About
     },
-
+    {
+        path: "/query",
+        component: Query
+    }
 ];
 
 const router = new VueRouter({
@@ -46,4 +50,3 @@ const router = new VueRouter({
 });
 
 export default router;
-

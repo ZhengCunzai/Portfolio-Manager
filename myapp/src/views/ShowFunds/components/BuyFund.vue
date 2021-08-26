@@ -1,68 +1,77 @@
 <template>
   <span>
-    <el-popover
-      icon="el-icon-message-solid"
-      placement="top"
-      width="160"
-      v-model="visible"
+    <el-button
+      size="mini"
+      icon="el-icon-goods"
+      slot="reference"
+      type="primary"
+      @click="
+        BuyFundMethod();
+        BuyInsertValume();
+      "
+      >Buy This</el-button
     >
-      <p>Sure to Buy this Fund？</p>
-      <div style="text-align: right; margin: 0">
-        <el-button
-          size="mini"
-          @click="
-            cancleMessage();
-            visible = false;
-          "
-          >Cancle</el-button
-        >
-        <el-button
-          type="primary"
-          size="mini"
-          @click="
-            sureMessage();
-            visible = false;
-          "
-          >Sure</el-button
-        >
-      </div>
-
-      <el-button
-        size="mini"
-        icon="el-icon-s-goods"
-        slot="reference"
-        type="primary"
-        @click="BuyFundMethod"
-        >Buy This</el-button
-      >
-    </el-popover>
   </span>
 </template>
 
 <script>
+import { buyInvestment } from "../../../api/fund";
 export default {
   data() {
     return {
       dialogTableVisible: false,
-      visible: false,
+      // visible: false,
     };
   },
+  props: {
+    positionId: String,
+    symbol: String,
+    price: Number,
+    myType: String,
+  },
   methods: {
+    BuyInsertValume() {
+      this.$prompt("Please input sell volume", "TIPS", {
+        confirmButtonText: "sure",
+        cancelButtonText: "cancle",
+      })
+        .then(({ value }) => {
+          buyInvestment({
+            positionId: this.positionId,
+            symbol: this.symbol,
+            volume: parseInt(value),
+            price: this.price,
+            type: this.myType,
+          }).then(
+            (res) => {
+              if (res.code === 200) {
+                this.$message({
+                  type: "success",
+                  message: "your buy: " + value + " vomules",
+                  showClose: true,
+                });
+              } else {
+                this.$message({
+                  message: "Buy Failed",
+                  type: "error",
+                  showClose: true,
+                });
+              }
+            },
+            (res) => {
+              this.$message.error(res.message);
+            }
+          );
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "cancleed",
+            showClose: true,
+          });
+        });
+    },
     BuyFundMethod() {},
-    sureMessage() {
-      this.$message({
-        message: "Buy Successful",
-        type: "success",
-        showClose: true,
-      });
-    },
-    cancleMessage() {
-      this.$message({
-        message: "Cancled",
-        type: "warning",
-        showClose: true,
-      });
-    },
   },
 };
 </script>

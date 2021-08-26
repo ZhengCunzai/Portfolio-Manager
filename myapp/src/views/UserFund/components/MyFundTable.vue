@@ -3,7 +3,7 @@
     :data="
       tableData.filter(
         (data) =>
-          !search || data.fundid.toLowerCase().includes(search.toLowerCase())
+          !search || data.symble.toLowerCase().includes(search.toLowerCase())
       )
     "
     style="width: 100%"
@@ -11,23 +11,22 @@
     <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" class="demo-table-expand">
-          <el-form-item label="type">
+          <el-form-item label="Type">
             <span>{{ props.row.type }}</span>
           </el-form-item>
-          <el-form-item label="createDate">
+          <el-form-item label="CreateDate">
             <span>{{ props.row.createDate }}</span>
           </el-form-item>
-          <el-form-item label="updateDate">
+          <el-form-item label="UpdateDate">
             <span>{{ props.row.updateDate }}</span>
           </el-form-item>
         </el-form>
       </template>
     </el-table-column>
 
-    <el-table-column label="positionID" prop="positionID"> </el-table-column>
-    <el-table-column label="symbol" prop="symbol"> </el-table-column>
-    <el-table-column label="volume" prop="volume"> </el-table-column>
-    <el-table-column label="prices" prop="prices"> </el-table-column>
+    <el-table-column label="Symbol" prop="symbol"> </el-table-column>
+    <el-table-column label="Volume" prop="volume"> </el-table-column>
+    <el-table-column label="Price" prop="price"> </el-table-column>
     <el-table-column align="right">
       <template slot="header" slot-scope="scope">
         <el-input
@@ -39,8 +38,18 @@
 
       <template slot-scope="scope">
         <el-button :placeholder="`${scope}`" style="display: none"></el-button>
-        <fund-sell></fund-sell>
-        <fund-buy></fund-buy>
+        <fund-sell
+          :positionId="scope.row.positionId"
+          :price="scope.row.currentPrice"
+          :myType="scope.row.type"
+          :symbol="scope.row.symbol"
+        ></fund-sell>
+        <fund-buy
+          :positionId="scope.row.positionId"
+          :price="scope.row.currentPrice"
+          :myType="scope.row.type"
+          :symbol="scope.row.symbol"
+        ></fund-buy>
       </template>
     </el-table-column>
   </el-table>
@@ -49,6 +58,7 @@
 <script>
 import SellFund from "./SellFund.vue";
 import BuyFund from "../../ShowFunds/components/BuyFund.vue";
+import { getPersonalInvestment } from "../../../api/fund";
 export default {
   components: {
     "fund-sell": SellFund,
@@ -58,26 +68,42 @@ export default {
     return {
       tableData: [
         {
-          positionID: "p1001",
-          symbol: "IВM",
-          volume: "520",
-          prices: "140",
+          id: 1,
+          positionId: "p1001",
+          symbol: "IBM",
+          volume: 520,
+          price: 140,
           type: "ETF",
-          createDate: "2021-08-14",
-          updateDate: "2021-08-14",
+          createDate: "2021-08-14 00:00:00",
+          updateDate: "2021-08-14 00:00:00",
         },
         {
-          positionID: "p1002",
+          id: 13,
+          positionId: "p1002",
           symbol: "Google",
-          volume: "1000",
-          prices: "2847",
+          volume: 1000,
+          price: 2847,
           type: "stock",
-          createDate: "2021-08-16",
-          updateDate: "2021-08-16",
+          createDate: "2021-08-16 00:00:00",
+          updateDate: "2021-08-16 00:00:00",
         },
       ],
       search: "",
     };
+  },
+  created() {
+    getPersonalInvestment().then(
+      (res) => {
+        if (res.code === 200) {
+          this.tableData = res.data;
+        } else {
+          this.$message.error(res.message);
+        }
+      },
+      (res) => {
+        this.$message.error(res.message);
+      }
+    );
   },
 };
 </script>
@@ -101,7 +127,6 @@ export default {
   margin-bottom: 0;
   height: 60px;
   width: 80%;
-  
 }
 .demo-table-expand .el-form-item span {
   line-height: 60px;
