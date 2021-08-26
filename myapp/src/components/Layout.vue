@@ -37,16 +37,15 @@ export default {
 }
 .el-aside {
   color: #333;
-  text-align: center;
-  width: 400px;
+  width: 350px;
   height: 100%;
-  /*margin: 0 auto;*/
 }
 .el-header {
   width: 100%;
   color: #333;
-  text-align: center;
-  margin: 0 auto;
+  /*text-align: center;*/
+  margin-top: 40px;
+  /*margin: 0 auto;*/
 }
 .el-footer {
   /* height: 80px !important; */
