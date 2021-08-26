@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0516d468-f010-4908-a5fc-1f633edc58c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/api/foud.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/api/foud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/NaviMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/NaviMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629905984489</updated>
-      <workItem from="1629905985887" duration="19185000" />
+      <workItem from="1629905985887" duration="23360000" />
     </task>
     <servers />
   </component>
