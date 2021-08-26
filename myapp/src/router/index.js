@@ -2,12 +2,24 @@ import VueRouter from "vue-router";
 import Home from '../views/Home';
 import ShowFunds from "../views/ShowFunds";
 import UserFund from "../views/UserFund";
+import Dashboard from "../views/Dashboard";
+import Piechart from "../views/Piechart";
 
 
 const routes = [
     {
         path: "/",
         redirect: "/showFunds",
+    },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        component: Dashboard
+    },
+    {
+        path: "/piechart",
+        name: "Piechart",
+        component: Piechart
     },
     {
         path: "/home",
@@ -30,4 +42,3 @@ const router = new VueRouter({
 });
 
 export default router;
-
