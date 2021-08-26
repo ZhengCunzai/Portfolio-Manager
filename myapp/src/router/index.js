@@ -7,6 +7,8 @@ import ShowOneFund from "../views/ShowOneFund";
 import Buy from "../views/Buy";
 import Sell from "../views/Sell";
 import UserFund from "../views/UserFund";
+import Dashboard from "../views/Dashboard";
+import Piechart from "../views/Piechart";
 
 
 Vue.use(VueRouter);
@@ -19,6 +21,16 @@ const routes = [
     {
         path: "/",
         redirect: "/home",
+    },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        component: Dashboard
+    },
+    {
+        path: "/piechart",
+        name: "Piechart",
+        component: Piechart
     },
     {
         path: "/home",

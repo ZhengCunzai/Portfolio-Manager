@@ -7,4 +7,4 @@ export function getFoud(data) {
         method: 'get',
         data
     });
-};
+}
