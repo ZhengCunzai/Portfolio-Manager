@@ -14,7 +14,7 @@ export default {
   methods: {
     Start() {
       this.$router.push({
-        path: "/login",
+        path: "/showFunds",
       });
     },
   },
