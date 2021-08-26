@@ -72,11 +72,11 @@ export default {
         if (res.code === 200) {
           this.tableData = res.data;
         } else {
-          this.$message.error(res.message);
+          this.$message.error({ duration: 500, message: res.message});
         }
       },
       (res) => {
-        this.$message.error(res.message);
+        this.$message.error({ duration: 500, message: res.message});
       }
     );
   },

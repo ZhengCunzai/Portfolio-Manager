@@ -8,6 +8,8 @@
     >
       <el-menu-item index="showFunds"> Funds </el-menu-item>
       <el-menu-item index="userfund">My Funds</el-menu-item>
+
+      <el-menu-item index="query">Query</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -15,7 +17,7 @@
 <script>
 export default {
   data() {
-    return { activeIndex: "userfund" };
+    return { activeIndex: "showFunds" };
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -30,6 +32,12 @@ export default {
             path: "/userfund",
           });
           break;
+        case "query":
+          this.$router.push({
+            path: "/query",
+          });
+          break;
+
         default:
           break;
       }

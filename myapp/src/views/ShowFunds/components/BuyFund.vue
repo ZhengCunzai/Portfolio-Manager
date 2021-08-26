@@ -39,7 +39,7 @@ export default {
           buyInvestment({
             positionId: this.positionId,
             symbol: this.symbol,
-            volume: value,
+            volume: parseInt(value),
             price: this.price,
             type: this.myType,
           }).then(

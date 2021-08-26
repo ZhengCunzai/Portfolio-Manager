@@ -4,6 +4,7 @@ import ShowFunds from "../views/ShowFunds";
 import UserFund from "../views/UserFund";
 import Dashboard from "../views/Dashboard";
 import Piechart from "../views/Piechart";
+import Query from "../views/Query"
 
 
 const routes = [
@@ -34,6 +35,10 @@ const routes = [
         path: "/userfund",
         component: UserFund
     },
+    {
+        path: "/query",
+        component: Query
+    }
 
 ];
 
