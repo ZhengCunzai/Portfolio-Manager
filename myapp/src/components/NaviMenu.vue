@@ -10,14 +10,14 @@
       <i class="el-icon-location"></i>
       <span>Home</span>
     </el-menu-item>
-    <el-submenu index="2">
+    <el-submenu >
       <template slot="title">
       <i class="el-icon-menu"></i>
       <span slot="title">My Investment</span>
       </template>
       <el-menu-item-group>
         <template slot="title">CITI</template>
-        <el-menu-item index="2-1">Portfolio</el-menu-item>
+        <el-menu-item index="/dashboard">Dashboard</el-menu-item>
         <el-menu-item index="/profit">Profit analysis</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
@@ -31,11 +31,11 @@
         <el-menu-item index="/userfund">My Fund</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-menu-item index="4">
+    <el-menu-item index="/query">
       <i class="el-icon-document"></i>
       <span slot="title">My Cash</span>
     </el-menu-item>
-    <el-menu-item index="5">
+    <el-menu-item index="/market">
       <i class="el-icon-document"></i>
       <span slot="title">Market</span>
     </el-menu-item>
