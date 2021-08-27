@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0516d468-f010-4908-a5fc-1f633edc58c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/api/fund.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/api/querry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/views/Query/components/Account.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/views/Query/components/Trade.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/views/Query/components/Transaction.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/src/views/Query/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/api/foud.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/AllFundTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/AllFundTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/BuyFund.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/BuyFund.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/FundDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/ShowFunds/components/FundDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/UserFund/components/MyFundTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/UserFund/components/MyFundTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/UserFund/components/SellFund.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/UserFund/components/SellFund.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/src/views/UserFund/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/views/UserFund/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/api/querry.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/api/querry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/src/components/NaviMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/src/components/NaviMenu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +34,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/myapp/src/views/Market" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Portfolio-Manager\myapp\src\views\Market" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,7 +53,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629905984489</updated>
-      <workItem from="1629905985887" duration="31057000" />
+      <workItem from="1629905985887" duration="31199000" />
+      <workItem from="1630027432523" duration="213000" />
+      <workItem from="1630027668753" duration="2576000" />
     </task>
     <servers />
   </component>
@@ -80,5 +72,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
