@@ -3,7 +3,7 @@
     :data="
       tableData.filter(
         (data) =>
-          !search || data.symble.toLowerCase().includes(search.toLowerCase())
+          !search || data.symbol.toLowerCase().includes(search.toLowerCase())
       )
     "
     style="width: 100%"
