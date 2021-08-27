@@ -1,8 +1,10 @@
 <template>
   <my-layout>
-    <div>Citi Fund Management System</div>
+    <h1>Market Details (IBM)</h1>
     <my-linechart></my-linechart>
+    <h1> Portfolio (My investment)</h1>
     <my-piechart></my-piechart>
+    <h1> Profit ((My investment))</h1>
     <my-profitchart></my-profitchart>
 <!--    <el-button type="primary" @click="Start">Start</el-button>-->
   </my-layout>
