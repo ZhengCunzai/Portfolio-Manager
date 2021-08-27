@@ -35,30 +35,7 @@ import { getTrade } from "../../../api/querry";
 export default {
   data() {
     return {
-      tableData: [
-        {
-          id: 1,
-          tradeId: "tr1001",
-          positionId: "p1004",
-          symbol: "alibaba",
-          type: "stock",
-          volume: 1400,
-          price: 1458,
-          amount: -145266,
-          createDate: "2021-08-14 00:00:00",
-        },
-        {
-          id: 2,
-          tradeId: "tr1002",
-          positionId: "p1005",
-          symbol: "alibaba",
-          type: "stock",
-          volume: 1400,
-          price: 1458,
-          amount: 145266,
-          createDate: "2021-08-14 00:00:00",
-        },
-      ],
+      tableData: [],
       value1: "",
     };
   },

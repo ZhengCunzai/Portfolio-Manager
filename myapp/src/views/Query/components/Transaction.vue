@@ -33,24 +33,7 @@ import { getTransaction } from "../../../api/querry";
 export default {
   data() {
     return {
-      tableData: [
-        {
-          id: 1,
-          transactionId: "t1001",
-          type: "food",
-          price: -140,
-          comment: "Starbucks coffee",
-          createDate: "2021-08-14 00:00:00",
-        },
-        {
-          id: 2,
-          transactionId: "t1002",
-          type: "salary",
-          price: 140,
-          comment: "salary payment",
-          createDate: "2021-08-14 00:00:00",
-        },
-      ],
+      tableData: [],
       value1: "",
     };
   },
