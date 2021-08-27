@@ -1,23 +1,23 @@
 import axios from "axios";
-const baseUrl = '127.0.0.1:8090'
+const baseUrl = '/api'
 
 export function getAllInvestment() {
     return axios({
-        url: baseUrl + 'inv/showAllInvestment',
+        url: baseUrl + '/inv/showAllInvestment',
         method: 'get',
     })
 }
 
 export function getInvestmentDetail(symbol) {
     return axios({
-        url: baseUrl + `inv/showAllInvestment/${symbol}`,
+        url: baseUrl + `/inv/showInvestmentDetail/${symbol}`,
         method: 'get',
     })
 }
 
 export function buyInvestment(data) {
     return axios({
-        url: baseUrl + `inv/buyInvestment`,
+        url: baseUrl + `/inv/buyInvestment`,
         method: 'post',
         data
     })
@@ -25,7 +25,7 @@ export function buyInvestment(data) {
 
 export function sellInvestment(data) {
     return axios({
-        url: baseUrl + `inv/buyInvestment`,
+        url: baseUrl + `/inv/sellInvestment`,
         method: 'post',
         data
     })
@@ -34,7 +34,7 @@ export function sellInvestment(data) {
 
 export function getPersonalInvestment() {
     return axios({
-        url: baseUrl + 'inv/showPersonalInvestment',
+        url: baseUrl + '/inv/showPersonalInvestment',
         method: 'get',
     })
 }

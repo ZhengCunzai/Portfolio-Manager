@@ -56,14 +56,15 @@ export default {
       this.dialogTableVisible = true;
       getInvestmentDetail(this.symbol).then(
         (res) => {
-          if (res.code === 200) {
-            this.fundDetailsData = res.data;
+          console.log(res.data.data)
+          if (res.data.code === 200) {
+            this.fundDetailsData = res.data.data;
           } else {
-            this.$message.error(res.message);
+            this.$message.error(res.data.message);
           }
         },
         (res) => {
-          this.$message.error(res.message);
+          this.$message.error(res.data.message);
         }
       );
     },

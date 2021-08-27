@@ -44,7 +44,7 @@ export default {
             type: this.myType,
           }).then(
             (res) => {
-              if (res.code === 200) {
+              if (res.data.code === 200) {
                 this.$message({
                   type: "success",
                   message: "your selled: " + value + " vomules",
@@ -59,7 +59,7 @@ export default {
               }
             },
             (res) => {
-              this.$message.error(res.message);
+              this.$message.error(res.data.message);
             }
           );
         })

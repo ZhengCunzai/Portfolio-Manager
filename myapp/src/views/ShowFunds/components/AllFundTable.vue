@@ -50,18 +50,7 @@ export default {
   data() {
     return {
       tableData: [
-        {
-          symbol: "Alibaba",
-          type: "stock",
-          todayOpenPrice: 142,
-          currentPrice: 235,
-        },
-        {
-          symbol: "Alibaba",
-          type: "stock",
-          todayOpenPrice: 142,
-          currentPrice: 235,
-        },
+        
       ],
       search: "",
     };
@@ -69,16 +58,18 @@ export default {
   created() {
     getAllInvestment().then(
       (res) => {
-        if (res.code === 200) {
-          this.tableData = res.data;
+        if (res.data.code === 200) {
+          this.tableData = res.data.data;
+
         } else {
-          this.$message.error({ duration: 500, message: res.message});
+          this.$message.error({ duration: 500, message: res.data.message });
         }
       },
       (res) => {
-        this.$message.error({ duration: 500, message: res.message});
+        this.$message.error({ duration: 500, message: res.data.message });
       }
     );
+    console.log(this.tableData);
   },
 };
 </script>

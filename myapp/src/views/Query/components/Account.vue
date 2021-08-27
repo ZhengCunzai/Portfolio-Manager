@@ -48,15 +48,15 @@ export default {
       console.log(this.value1[0], this.value1[1]);
       getAccount(this.value1[0], this.value1[1]).then(
         (res) => {
-          if (res.code === 200) {
-            this.tableData = res.data;
+          if (res.data.code === 200) {
+            this.tableData = res.data.data;
             this.$message.success({ duration: 500, message: "查询成功" });
           } else {
-            this.$message.error({ duration: 500, message: res.message });
+            this.$message.error({ duration: 500, message: res.data.message });
           }
         },
         (res) => {
-          this.$message.error({ duration: 500, message: res.message });
+          this.$message.error({ duration: 500, message: res.data.message });
         }
       );
     },

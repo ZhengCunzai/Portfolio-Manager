@@ -14,9 +14,6 @@
           <el-form-item label="Type">
             <span>{{ props.row.type }}</span>
           </el-form-item>
-          <el-form-item label="CreateDate">
-            <span>{{ props.row.createDate }}</span>
-          </el-form-item>
           <el-form-item label="UpdateDate">
             <span>{{ props.row.updateDate }}</span>
           </el-form-item>
@@ -67,26 +64,26 @@ export default {
   data() {
     return {
       tableData: [
-        {
-          id: 1,
-          positionId: "p1001",
-          symbol: "IBM",
-          volume: 520,
-          price: 140,
-          type: "ETF",
-          createDate: "2021-08-14 00:00:00",
-          updateDate: "2021-08-14 00:00:00",
-        },
-        {
-          id: 13,
-          positionId: "p1002",
-          symbol: "Google",
-          volume: 1000,
-          price: 2847,
-          type: "stock",
-          createDate: "2021-08-16 00:00:00",
-          updateDate: "2021-08-16 00:00:00",
-        },
+        // {
+        //   id: 1,
+        //   positionId: "p1001",
+        //   symbol: "IBM",
+        //   volume: 520,
+        //   price: 140,
+        //   type: "ETF",
+        //   createDate: "2021-08-14 00:00:00",
+        //   updateDate: "2021-08-14 00:00:00",
+        // },
+        // {
+        //   id: 13,
+        //   positionId: "p1002",
+        //   symbol: "Google",
+        //   volume: 1000,
+        //   price: 2847,
+        //   type: "stock",
+        //   createDate: "2021-08-16 00:00:00",
+        //   updateDate: "2021-08-16 00:00:00",
+        // },
       ],
       search: "",
     };
@@ -94,16 +91,17 @@ export default {
   created() {
     getPersonalInvestment().then(
       (res) => {
-        if (res.code === 200) {
-          this.tableData = res.data;
+        if (res.data.code === 200) {
+          this.tableData = res.data.data;
         } else {
-          this.$message.error(res.message);
+          this.$message.error(res.data.message);
         }
       },
       (res) => {
-        this.$message.error(res.message);
+        this.$message.error(res.data.message);
       }
     );
+    console.log(this.tableData);
   },
 };
 </script>

@@ -68,15 +68,15 @@ export default {
       console.log(this.value1[0], this.value1[1]);
       getTrade(this.value1[0], this.value1[1]).then(
         (res) => {
-          if (res.code === 200) {
-            this.tableData = res.data;
+          if (res.data.code === 200) {
+            this.tableData = res.data.data;
             this.$message.success("查询成功");
           } else {
-            this.$message.error(res.message);
+            this.$message.error(res.data.message);
           }
         },
         (res) => {
-          this.$message.error(res.message);
+          this.$message.error(res.data.message);
         }
       );
     },
