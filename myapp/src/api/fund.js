@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = '127.0.0.1:8000'
+const baseUrl = '127.0.0.1:8090'
 
 export function getAllInvestment() {
     return axios({
