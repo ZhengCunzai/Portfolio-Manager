@@ -6,6 +6,7 @@ import Profit from "../views/Profit";
 import Dashboard from "../views/Dashboard";
 import About from "../views/About";
 import Query from "../views/Query"
+import Market from "../views/Market"
 
 const routes = [
     {
@@ -21,6 +22,11 @@ const routes = [
         path: "/dashboard",
         name: "Dashboard",
         component: Dashboard
+    },
+    {
+        path: "/market",
+        name: "Market",
+        component: Market
     },
     {
         path: "/home",

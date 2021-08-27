@@ -60,16 +60,16 @@ export default {
         },
         series: [
           {
-            name: "Traffic Sources",
+            name: "Investment account",
             type: "pie",
             radius: "55%",
             center: ["50%", "60%"],
             data: [
-              { value: 33500, name: "Bonds" },
-              { value: 31000, name: "Stocks" },
-              { value: 23400, name: "ETFs" },
-              { value: 13500, name: "Funds" },
-              { value: 15480, name: "Future" }
+              { value: 33500, name: "Bonds($)" },
+              { value: 31000, name: "Stocks($)" },
+              { value: 23400, name: "ETFs($)" },
+              { value: 13500, name: "Funds($)" },
+              { value: 15480, name: "Future($)" }
             ],
             emphasis: {
               itemStyle: {

@@ -9,7 +9,7 @@
 
 <script>
 import Layout from "../../components/Layout.vue";
-import * as echarts from 'echarts/core';
+// import * as echarts from 'echarts/core';
 import { use } from "echarts/core";
 import {LineChart} from 'echarts/charts';
 import {CanvasRenderer} from 'echarts/renderers';
@@ -22,9 +22,15 @@ import {
   LegendComponent
 } from 'echarts/components';
 import VChart, { THEME_KEY } from "vue-echarts";
-use(
-    [TitleComponent, ToolboxComponent, TooltipComponent, GridComponent, LegendComponent, LineChart, CanvasRenderer]
-);
+use([
+      TitleComponent,
+      ToolboxComponent,
+      TooltipComponent,
+      GridComponent,
+      LegendComponent,
+      LineChart,
+      CanvasRenderer
+    ]);
 
 export default {
   components: {
@@ -38,7 +44,7 @@ export default {
     return{
     option : {
       title: {
-        text: 'market'
+        text: 'Market'
       },
       tooltip: {
         trigger: 'axis',
@@ -107,4 +113,7 @@ export default {
 
 <style scoped>
 
+.chart {
+  height: 500px;
+}
 </style>
