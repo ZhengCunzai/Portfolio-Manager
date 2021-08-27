@@ -6,7 +6,7 @@
       @open="handleOpen"
       @close="handleClose">
     <el-image fit="contain" :src="require('../assets/R-C.png')"></el-image>
-    <el-menu-item index="/home">
+    <el-menu-item index="/dashboard">
       <i class="el-icon-location"></i>
       <span>Home</span>
     </el-menu-item>

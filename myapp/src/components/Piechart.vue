@@ -1,10 +1,5 @@
 <template>
-  <my-layout>
-  <div>
-    <v-chart class="chart" :option="option" />
-  </div>
-  </my-layout>
-
+  <v-chart class="chart" :option="option" />
 </template>
 
 <script>
@@ -17,8 +12,7 @@ import {
   LegendComponent
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
-import Layout from "@/components/Layout";
-// import Layout from "../../components/Layout.vue";
+
 use([
   CanvasRenderer,
   PieChart,
@@ -29,7 +23,6 @@ use([
 
 export default {
   components: {
-    "my-layout": Layout,
     VChart
   },
   provide: {

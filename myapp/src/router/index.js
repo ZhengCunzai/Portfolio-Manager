@@ -1,5 +1,4 @@
 import VueRouter from "vue-router";
-import Home from '../views/Home';
 import ShowFunds from "../views/ShowFunds";
 import UserFund from "../views/UserFund";
 import Profit from "../views/Profit";
@@ -11,7 +10,7 @@ import Market from "../views/Market"
 const routes = [
     {
         path: "/",
-        redirect: "/home",
+        redirect: "/dashboard",
     },
     {
         path: "/profit",
@@ -27,11 +26,6 @@ const routes = [
         path: "/market",
         name: "Market",
         component: Market
-    },
-    {
-        path: "/home",
-        name: "Home",
-        component: Home
     },
     {
         path: "/showFunds",
